@@ -1,14 +1,25 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import RickList from '../views/RickList.vue'
+import RickCharacter from '../views/RickCharacter.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'RickList',
+    component: RickList
+  },
+  // {
+  //   path: '/character',
+  //   name: 'RickCharacter',
+  //   component: RickCharacter
+  // },
+  {
+    path: '/character/:id',
+    name: 'CharacterDetails',
+    component: RickCharacter,
   },
   {
     path: '/about',
